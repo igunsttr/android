@@ -1,0 +1,61 @@
+/* style.css */
+
+/* 1. Memberi ruang agar navbar fixed-top tidak menutupi konten */
+body {
+    padding-top: 58px;
+    background-color: #f8f9fa; /* Warna latar sedikit abu-abu agar kartu menonjol */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 2. Font khusus untuk Judul Berita agar terlihat formal/serius */
+.serif-font {
+    font-family: 'Merriweather', serif;
+}
+
+/* 3. Styling Menu Scroll Horizontal (Kategori) */
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 3rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap; /* Mencegah item turun ke bawah */
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto; /* Mengaktifkan scroll samping */
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll di iOS */
+}
+
+/* Menyembunyikan scrollbar agar terlihat bersih */
+.nav-scroller .nav::-webkit-scrollbar {
+    display: none;
+}
+
+.sticky-sub-nav {
+    position: sticky;
+    top: 56px; /* Menempel tepat di bawah navbar utama */
+    z-index: 1020;
+    background-color: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(5px); /* Efek blur */
+}
+
+/* 4. Overlay Gradient pada Headline agar teks terbaca di atas gambar */
+.bg-gradient-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    padding: 1.5rem;
+}
+
+/* 5. Styling Link Navigasi */
+.nav-link {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+.nav-link.active {
+    color: #dc3545 !important; /* Warna Merah untuk aktif */
+    border-bottom: 2px solid #dc3545;
+}
